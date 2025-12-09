@@ -1,21 +1,26 @@
 pipeline {
     agent any
-    
     tools {
-        maven 'Maven-3.9'
+        maven 'mvn-3.9'
         jdk 'jdk-17'
     }
 
     stages {
-        stage('git checkout') {
+
+       stage('mvn compile') {
             steps {
-               git branch: 'main',url: 'https://github.com/devopsbykrishnareddy/Boardgame.git'
+                sh 'mvn compile'
             }
         }
-        stage('package') {
+       stage('mvn test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+       stage('mvn pkg') {
             steps {
                 sh 'mvn package'
             }
-        }
+        }                
     }
 }
