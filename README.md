@@ -8,7 +8,7 @@ This web application displays lists of board games and their reviews. While anyo
 ## Technologies
 
 - Java.
-- Spring Boot
+- Spring Boott
 - Amazon Web Services(AWS) EC2
 - Thymeleaf
 - Thymeleaf Fragments
